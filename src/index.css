@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: basker;
+    src: url("../src/assets/fonts/Baskervville-Regular.ttf");
+}
+
+@theme {
+  
+  
+  --font-para:basker;
+  
+}
+
+
+
+
+
+
+body {
+  margin: 0;
+  background-color: #f8f8f8;
+  background-image: url("/src/assets/image/pattern.jpg");
+  background-repeat: repeat;
+  background-size: auto;       /* or e.g. 40px 40px to control circle size */
+}
+
+/* Smooth scrolling for all browsers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Extra top margin for fixed navbar */
+.scroll-mt-20 {
+  scroll-margin-top: 8rem;
+}
