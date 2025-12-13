@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import groomImg from "../assets/image/groom.jpg";
-import brideImg from "../assets/image/bride.jpg";
-import coupleImg from "../assets/image/couple.jpg";
+import groomImg from "../assets/image/Groom.jpg";
+import brideImg from "../assets/image/Bride.jpg";
+import coupleImg from "../assets/image/Couple.jpg";
 
 export default function GroomBride() {
   const containerVariants = {
@@ -218,4 +218,3 @@ function ProfileCard({ image, name, role, groomBio, brideBio, delay = 0 }) {
     </motion.div>
   );
 }
-  
