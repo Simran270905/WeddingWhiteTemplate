@@ -48,7 +48,7 @@ const OurStory = () => {
         transition={{ duration: 0.3 }}
       >
         <motion.h2 
-          className="mb-4 text-4xl md:text-5xl lg:text-6xl font-serif tracking-wide"
+          className="mb-4 text-4xl md:text-5xl lg:text-6xl font-font font-bold tracking-wide"
           variants={itemVariants}
           whileHover={{ 
             scale: 1.02,

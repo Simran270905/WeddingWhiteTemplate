@@ -48,7 +48,7 @@ export default function GroomBride() {
         viewport={{ once: true, margin: "-100px" }}
       >
         <motion.h2 
-          className="text-4xl md:text-5xl lg:text-6xl font-['Playfair_Display'] italic text-gray-800"
+          className="text-4xl md:text-5xl lg:text-6xl font-font font-bold italic text-gray-800"
           whileHover={{ scale: 1.05 }}
         >
           Groom & Bride

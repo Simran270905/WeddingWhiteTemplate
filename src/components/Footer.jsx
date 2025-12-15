@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 text-center space-y-4">
         
         <p className="text-lg">
-          📞 Contact us: <span className="text-white">+91 98765 43210</span>
+          📞 Contact us: <span className="text-white">+91 99999</span>
         </p>
 
         <p className="text-sm">

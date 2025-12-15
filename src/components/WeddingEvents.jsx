@@ -71,7 +71,7 @@ export default function WeddingEvents() {
             variants={headingVariants}
           >
             <motion.h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-['Playfair_Display'] italic text-gray-800 text-center lg:text-left leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-font font-bold italic text-gray-800 text-center lg:text-left leading-tight"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
             >
@@ -137,7 +137,7 @@ export default function WeddingEvents() {
                 />
 
                 <motion.h3 
-                  className="text-xl md:text-2xl font-semibold uppercase tracking-wide ml-8 lg:ml-12 text-gray-800 mb-3 pl-2 pr-4 py-2 rounded-lg group-hover:text-rose-600 group-hover:bg-rose-50/50 transition-all duration-300"
+                  className="text-xl md:text-2xl font-font font-semibold uppercase tracking-wide ml-8 lg:ml-12 text-gray-800 mb-3 pl-2 pr-4 py-2 rounded-lg group-hover:text-rose-600 group-hover:bg-rose-50/50 transition-all duration-300"
                   whileHover={{ scale: 1.05, x: 10 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -145,7 +145,7 @@ export default function WeddingEvents() {
                 </motion.h3>
 
                 <motion.p 
-                  className="text-gray-600 mt-3 leading-relaxed ml-8 lg:ml-12 max-w-md pl-2"
+                  className="text-gray-600 mt-3 leading-relaxed ml-8 lg:ml-12 max-w-md pl-2 font-para"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 1.3 + index * 0.2 }}

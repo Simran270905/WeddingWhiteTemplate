@@ -43,7 +43,7 @@ export default function TravelStay() {
         {/* Left Content */}
         <motion.div>
           <motion.h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-['Playfair_Display'] italic text-gray-800 mb-8 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-font font-bold text-gray-800 mb-8 leading-tight"
             variants={headingVariants}
             whileHover={{ scale: 1.03, color: "#4f46e5" }}
           >
@@ -51,7 +51,7 @@ export default function TravelStay() {
           </motion.h2>
 
           <motion.p 
-            className="text-gray-700 leading-relaxed mb-8 text-lg md:text-xl max-w-lg"
+            className="text-gray-700 leading-relaxed font-para mb-8 text-lg md:text-xl max-w-lg"
             variants={listItemVariants}
             initial={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}

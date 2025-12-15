@@ -79,7 +79,7 @@ const Hero = () => {
         </motion.div>
         
         <motion.h1 
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl tracking-wide leading-tight"
+          className="font-head text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl tracking-wide leading-tight"
           variants={itemVariants}
           whileHover={{ 
             scale: 1.02,
