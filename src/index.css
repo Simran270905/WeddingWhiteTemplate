@@ -71,3 +71,20 @@ html {
 .scroll-mt-20 {
   scroll-margin-top: 8rem;
 }
+
+video::-webkit-media-controls * {
+  cursor: pointer !important;
+}
+
+video::-webkit-media-controls-panel {
+  pointer-events: auto;
+}
+
+video::-moz-media-controls {
+  cursor: pointer;
+}
+
+video::-webkit-media-controls-panel {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
