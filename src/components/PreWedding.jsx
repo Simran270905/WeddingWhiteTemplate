@@ -1,6 +1,17 @@
+// src/components/PreWeddingShoot.jsx
 import { motion } from "framer-motion";
 import videoSrc from "../assets/video/prewedding.mp4";
-import { useRef } from "react"; 
+import { useRef } from "react";
+
+const preWeddingConfig = {
+  id: "prewedding-shoot-1",
+  title: "Pre-wedding",
+  titleHighlight: "PhotoShoot",
+  video: {
+    src: videoSrc,
+    poster: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200",
+  },
+};
 
 export default function PreWeddingShoot() {
   const containerVariants = {
@@ -33,7 +44,7 @@ export default function PreWeddingShoot() {
 
   return (
     <section className="w-full py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
-      {/* Heading - UNCHANGED */}
+      {/* Heading */}
       <motion.div
         className="text-center mb-16"
         variants={containerVariants}
@@ -46,9 +57,9 @@ export default function PreWeddingShoot() {
           whileHover={{ scale: 1.03, y: -5 }}
           transition={{ duration: 0.4 }}
         >
-          Pre-wedding
+          {preWeddingConfig.title}
           <br />
-          <span className="text-rose-500">PhotoShoot</span>
+          <span className="text-rose-500">{preWeddingConfig.titleHighlight}</span>
         </motion.h2>
 
         <motion.div
@@ -67,10 +78,9 @@ export default function PreWeddingShoot() {
         </motion.div>
       </motion.div>
 
-      {/* Video Section - UNCHANGED except external mute button removed */}
+      {/* Video Section */}
       <motion.div
         className="max-w-6xl mx-auto px-6"
-        //whileHover={{ y: -10 }}
         transition={{ duration: 0.4 }}
       >
         <motion.div
@@ -80,23 +90,23 @@ export default function PreWeddingShoot() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, type: "spring", stiffness: 100 }}
         >
-          {/* Decorative layers - UNCHANGED */}
+          {/* Decorative layers */}
           <div className="absolute inset-0 bg-gradient-to-r from-rose-500/5 via-transparent to-pink-500/5 rounded-3xl blur-xl -z-10 pointer-events-none" />
           <div className="absolute inset-4 bg-gradient-to-r from-white via-rose-50/30 to-white rounded-3xl shadow-2xl -z-10 pointer-events-none" />
 
           {/* Video with native controls only */}
           <motion.video
             ref={videoRef}
-            src={videoSrc}
+            src={preWeddingConfig.video.src}
+            poster={preWeddingConfig.video.poster}
             controls
             controlsList="nodownload"
             preload="metadata"
             playsInline
-            poster="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200"
-            className="relative z-0 w-full h-[70vh] md:h-[80vh] lg:h-[85vh] object-contain rounded-2xl shadow-inner "
+            className="relative z-0 w-full h-[70vh] md:h-[80vh] lg:h-[85vh] object-contain rounded-2xl shadow-inner"
           />
 
-          {/* Corner decorations - UNCHANGED */}
+          {/* Corner decorations */}
           <div className="pointer-events-none absolute top-4 left-4 w-12 h-12 bg-rose-100/80 border-2 border-rose-200 rounded-lg flex items-center justify-center shadow-md">
             <span className="text-rose-400 text-lg">♥</span>
           </div>

@@ -1,5 +1,23 @@
+// src/components/InvitationPage.jsx
 import { motion } from "framer-motion";
 import Invite from "../assets/image/invite.jpg";
+
+const invitationConfig = {
+  id: "wedding-invitation-1",
+  image: {
+    src: Invite,
+    alt: "Wedding couple",
+  },
+  subtitle1: "JOIN US TO CELEBRATE",
+  subtitle2: "THE WEDDING DAY OF",
+  coupleNames: "Kwan & Kiaraa",
+  subtitle3: "WHICH IS CELEBRATION ON",
+  weddingDate: "DEC | 25 | 2023",
+  timeStart: "STARTING AT 3:00",
+  timePeriod: "IN THE AFTERNOON",
+  venueName: "XYZ Palace",
+  venueCity: "Jaipur",
+};
 
 const InvitationPage = () => {
   const containerVariants = {
@@ -81,8 +99,8 @@ const InvitationPage = () => {
             transition={{ duration: 0.3 }}
           >
             <motion.img
-              src={Invite}
-              alt="Wedding couple"
+              src={invitationConfig.image.src}
+              alt={invitationConfig.image.alt}
               className="
                 w-full object-cover rounded-lg
                 h-[280px] sm:h-[380px] md:h-[500px] lg:h-[80vh]
@@ -113,9 +131,9 @@ const InvitationPage = () => {
               "
               variants={textItemVariants}
             >
-              JOIN US TO CELEBRATE
+              {invitationConfig.subtitle1}
               <br />
-              THE WEDDING DAY OF
+              {invitationConfig.subtitle2}
             </motion.p>
 
             <motion.h2
@@ -127,7 +145,7 @@ const InvitationPage = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              Kwan & Kiaraa
+              {invitationConfig.coupleNames}
             </motion.h2>
 
             <motion.p
@@ -137,7 +155,7 @@ const InvitationPage = () => {
               "
               variants={textItemVariants}
             >
-              WHICH IS CELEBRATION ON
+              {invitationConfig.subtitle3}
             </motion.p>
 
             <motion.p
@@ -149,7 +167,7 @@ const InvitationPage = () => {
               variants={dateVariants}
               whileHover={{ scale: 1.1, color: "#ef4444" }}
             >
-              DEC | 25 | 2023
+              {invitationConfig.weddingDate}
             </motion.p>
 
             <motion.div
@@ -160,8 +178,8 @@ const InvitationPage = () => {
               "
               variants={textItemVariants}
             >
-              <p>STARTING AT 3:00</p>
-              <p>IN THE AFTERNOON</p>
+              <p>{invitationConfig.timeStart}</p>
+              <p>{invitationConfig.timePeriod}</p>
             </motion.div>
 
             <motion.div
@@ -172,8 +190,8 @@ const InvitationPage = () => {
               "
               variants={textItemVariants}
             >
-              <p>XYZ Palace</p>
-              <p>Jaipur</p>
+              <p>{invitationConfig.venueName}</p>
+              <p>{invitationConfig.venueCity}</p>
             </motion.div>
           </div>
         </motion.div>

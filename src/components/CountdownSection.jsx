@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
 import bg from "../assets/image/bg.jpg"; // add your image
 
+const countdownConfig = {
+  id: "wedding-countdown-1",
+  weddingDateISO: "2026-11-15T00:00:00",
+  title: "Don't miss it",
+  bgImage: bg,
+};
+
 export default function CountdownSection() {
-  const weddingDate = new Date("2026-11-15T00:00:00").getTime();
+  const weddingDate = new Date(countdownConfig.weddingDateISO).getTime();
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
     const difference = weddingDate - now;
 
     return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / (1000 * 60)) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
+      days: Math.max(0, Math.floor(difference / (1000 * 60 * 60 * 24))),
+      hours: Math.max(0, Math.floor((difference / (1000 * 60 * 60)) % 24)),
+      minutes: Math.max(0, Math.floor((difference / (1000 * 60)) % 60)),
+      seconds: Math.max(0, Math.floor((difference / 1000) % 60)),
     };
   };
 
@@ -29,7 +36,7 @@ export default function CountdownSection() {
   return (
     <section
       className="w-full h-[320px] md:h-[380px] bg-cover bg-center relative"
-      style={{ backgroundImage: `url(${bg})` }}
+      style={{ backgroundImage: `url(${countdownConfig.bgImage})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
@@ -37,7 +44,7 @@ export default function CountdownSection() {
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
         <h2 className="text-2xl md:text-3xl font-['Playfair_Display'] mb-8 italic">
-          Don't miss it
+          {countdownConfig.title}
         </h2>
 
         <div className="flex flex-wrap justify-center gap-6 md:gap-10">
@@ -55,7 +62,7 @@ function CountdownCircle({ value, label }) {
   return (
     <div className="flex flex-col items-center">
       <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-white flex items-center justify-center text-2xl md:text-3xl font-semibold">
-        {value}
+        {value.toString().padStart(2, "0")}
       </div>
       <span className="mt-2 text-sm tracking-wide">{label}</span>
     </div>

@@ -2,6 +2,18 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const navbarConfig = {
+  id: "wedding-navbar-1",
+  navItems: [
+    { id: "home", label: "Home" },
+    { id: "story", label: "Story" },
+    { id: "events", label: "Events" },
+    { id: "invite", label: "Invite" },
+    { id: "shoot", label: "Shoot" },
+    { id: "contact", label: "Contact" },
+  ],
+};
+
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,14 +27,7 @@ const Navbar = () => {
     }
   };
 
-  const navItems = [
-    { id: "home", label: "Home" },
-    { id: "story", label: "Story" },
-    { id: "events", label: "Events" },
-    { id: "invite", label: "Invite" },
-    { id: "shoot", label: "Shoot" },
-    { id: "contact", label: "Contact" },
-  ];
+  const navItems = navbarConfig.navItems;
 
   return (
     <header className="fixed top-0 right-0 z-50 w-full">
